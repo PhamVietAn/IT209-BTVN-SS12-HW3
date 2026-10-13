@@ -1,0 +1,31 @@
+DỮ LIỆU MÔ PHỎNG - KHÔNG PHẢI LOG CHẠY TRÊN GITHUB THẬT
+Tài khoản: CrouAn244
+Workflow: Triển khai Staging và Production
+
+LƯỢT CHẠY 12 - PUSH VÀO DEVELOP
+2026-10-13 09:00:00 +07:00  Sự kiện push, nhánh develop.
+2026-10-13 09:00:01 +07:00  deploy-prod: Skipped.
+2026-10-13 09:00:03 +07:00  deploy-staging: In progress.
+2026-10-13 09:00:04 +07:00  Môi trường: staging
+2026-10-13 09:00:04 +07:00  Nhánh: develop
+2026-10-13 09:00:04 +07:00  Mã commit: 4d92b3e8c10fa567d2e3b4c5a6d7e8f9012abc34
+2026-10-13 09:00:04 +07:00  Mô phỏng triển khai Staging thành công.
+2026-10-13 09:00:05 +07:00  deploy-staging: Success.
+
+LƯỢT CHẠY 13 - PUSH VÀO MAIN
+2026-10-13 09:05:00 +07:00  Sự kiện push, nhánh main.
+2026-10-13 09:05:01 +07:00  deploy-staging: Skipped.
+2026-10-13 09:05:01 +07:00  deploy-prod: Waiting for review.
+2026-10-13 09:05:01 +07:00  Environment: production.
+2026-10-13 09:05:01 +07:00  Required reviewer: CrouAn244.
+2026-10-13 09:05:01 +07:00  Job chưa được khởi chạy; đang chờ phê duyệt.
+2026-10-13 09:06:10 +07:00  CrouAn244 chọn Review deployments.
+2026-10-13 09:06:15 +07:00  CrouAn244 chọn production và bấm Approve and deploy.
+2026-10-13 09:06:15 +07:00  Nhận xét: Đã kiểm tra Staging, đồng ý triển khai Production.
+2026-10-13 09:06:18 +07:00  deploy-prod: In progress.
+2026-10-13 09:06:19 +07:00  Deployment đã vượt qua quy tắc phê duyệt của production.
+2026-10-13 09:06:19 +07:00  Môi trường: production
+2026-10-13 09:06:19 +07:00  Nhánh: main
+2026-10-13 09:06:19 +07:00  Mã commit: 4d92b3e8c10fa567d2e3b4c5a6d7e8f9012abc34
+2026-10-13 09:06:19 +07:00  Mô phỏng triển khai Production thành công.
+2026-10-13 09:06:20 +07:00  deploy-prod: Success.

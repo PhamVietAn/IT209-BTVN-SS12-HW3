@@ -1,0 +1,44 @@
+name: Triển khai Staging và Production
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: staging
+      url: https://api.staging.example.com
+    steps:
+      - name: Mô phỏng triển khai lên Staging
+        run: |
+          echo "Môi trường: staging"
+          echo "Nhánh: $GITHUB_REF_NAME"
+          echo "Mã commit: $GITHUB_SHA"
+          echo "Mô phỏng triển khai Staging thành công."
+
+  deploy-prod:
+    name: Deploy to Production
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: production
+      url: https://api.prod.example.com
+    steps:
+      - name: Mô phỏng triển khai lên Production sau khi được duyệt
+        run: |
+          echo "Deployment đã vượt qua quy tắc phê duyệt của production."
+          echo "Môi trường: production"
+          echo "Nhánh: $GITHUB_REF_NAME"
+          echo "Mã commit: $GITHUB_SHA"
+          echo "Mô phỏng triển khai Production thành công."
